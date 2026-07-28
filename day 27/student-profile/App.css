@@ -1,0 +1,99 @@
+/* ---------- General Page ---------- */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f6fc;
+}
+
+/* ---------- Main Container ---------- */
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+}
+
+/* ---------- Heading ---------- */
+
+h1 {
+  color: #1e3a8a;
+  margin-bottom: 30px;
+  font-size: 42px;
+}
+
+h2 {
+  color: #2563eb;
+  margin-bottom: 15px;
+}
+
+h3 {
+  color: #374151;
+  margin-top: 20px;
+}
+
+/* ---------- Profile Card ---------- */
+
+.card {
+  background: white;
+  width: 80%;
+  margin: 25px auto;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* ---------- Text ---------- */
+
+.card p {
+  color: #4b5563;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.card strong {
+  color: #111827;
+}
+
+/* ---------- Skills List ---------- */
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.card li {
+  background: #e0edff;
+  color: #1e3a8a;
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 6px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* ---------- Horizontal Line ---------- */
+
+.card hr {
+  margin-top: 25px;
+  border: none;
+  border-top: 1px solid #d1d5db;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  color: #6b7280;
+  font-size: 16px;
+}
