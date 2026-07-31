@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Day 28 — Hooks &amp; useState</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-light: #f6f5f1;
+    --surface-light: #ffffff;
+    --text-light: #1c1c1a;
+    --sub-light: #6b6a63;
+    --border-light: #e3e1d9;
+
+    --bg-dark: #14161a;
+    --surface-dark: #1e2126;
+    --text-dark: #f1f0ec;
+    --sub-dark: #9ea1a8;
+    --border-dark: #2c2f36;
+    --accent: #ff6a3d;
+  }
+
+  *{ box-sizing: border-box; }
+
+  body{
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-light);
+    color: var(--text-light);
+    transition: background .35s ease, color .35s ease;
+    min-height: 100vh;
+  }
+
+  body.dark{
+    background: var(--bg-dark);
+    color: var(--text-dark);
+  }
+
+  .page{
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  .eyebrow{
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  h1{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 32px;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+
+  .subtitle{
+    font-size: 15px;
+    color: var(--sub-light);
+    margin-bottom: 40px;
+  }
+  body.dark .subtitle{ color: var(--sub-dark); }
+
+  .card{
+    background: var(--surface-light);
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 24px;
+    transition: background .35s ease, border-color .35s ease;
+  }
+  body.dark .card{
+    background: var(--surface-dark);
+    border-color: var(--border-dark);
+  }
+
+  .card-label{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 0 0 4px;
+  }
+
+  .card-title{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 18px;
+  }
+
+  input[type="text"]{
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 15px;
+    font-family: inherit;
+    border-radius: 10px;
+    border: 1px solid var(--border-light);
+    background: transparent;
+    color: inherit;
+    outline: none;
+    transition: border-color .2s ease;
+  }
+  body.dark input[type="text"]{ border-color: var(--border-dark); }
+  input[type="text"]:focus{ border-color: var(--accent); }
+
+  .greeting{
+    margin-top: 16px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  .greeting .emoji{ margin-left: 6px; }
+
+  .toggle-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .theme-btn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 999px;
+    border: none;
+    background: var(--accent);
+    color: #fff;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform .15s ease, opacity .15s ease;
+  }
+  .theme-btn:hover{ opacity: 0.9; }
+  .theme-btn:active{ transform: scale(0.97); }
+  .theme-btn:focus-visible{ outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  .status-text{
+    font-size: 14px;
+    color: var(--sub-light);
+  }
+  body.dark .status-text{ color: var(--sub-dark); }
+
+  footer{
+    font-size: 12px;
+    color: var(--sub-light);
+    text-align: center;
+    margin-top: 40px;
+  }
+  body.dark footer{ color: var(--sub-dark); }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel" data-presets="react">
+const { useState, useEffect } = React;
+
+// ---------- Task 01: Name Preview ----------
+function NamePreview(){
+  const [name, setName] = useState("");
+
+  return (
+    <div className="card">
+      <p className="card-label">Task 01</p>
+      <h2 className="card-title">Name Preview</h2>
+      <input
+        type="text"
+        placeholder="Type your name..."
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <p className="greeting">
+        {name.trim() ? `Hello, ${name.trim()}!` : "Hello, Guest!"}
+        <span className="emoji">{name.trim() ? "👋" : "👤"}</span>
+      </p>
+    </div>
+  );
+}
+
+// ---------- Task 02: Theme Toggle ----------
+function ThemeToggle({ isDark, onToggle }){
+  return (
+    <div className="card">
+      <p className="card-label">Task 02</p>
+      <h2 className="card-title">Theme Toggle</h2>
+      <div className="toggle-row">
+        <span className="status-text">
+          Currently in <strong>{isDark ? "Dark" : "Light"}</strong> mode
+        </span>
+        <button className="theme-btn" onClick={onToggle}>
+          {isDark ? "☀️ Light Mode" : "🌙 Dark Mode"}
+        </button>
+      </div>
+    </div>
+  );
+}
+
+// ---------- App ----------
+function App(){
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    document.body.classList.toggle("dark", isDark);
+  }, [isDark]);
+
+  return (
+    <div className="page">
+      <p className="eyebrow">Day 28 · Innolift Ventures</p>
+      <h1>Hooks &amp; useState</h1>
+      <p className="subtitle">Two small components, one core idea: state drives what the screen shows.</p>
+
+      <NamePreview />
+      <ThemeToggle isDark={isDark} onToggle={() => setIsDark((d) => !d)} />
+
+      <footer>Built with useState · Controlled Components · Conditional Rendering</footer>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>
