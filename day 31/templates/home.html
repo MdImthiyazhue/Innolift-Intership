@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Home — Mohamed Imthiyaz{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <p class="eyebrow">B.Tech · AI &amp; Data Science</p>
+  <h1>Hi, I'm Mohamed Imthiyaz.</h1>
+  <p class="hero-sub">
+    A 5th-semester AI &amp; Data Science student at BSACIST, currently building
+    full-stack and machine learning projects through the Innolift Ventures internship.
+  </p>
+  <div class="hero-actions">
+    <a href="{{ url_for('about') }}" class="btn btn-primary">About Me</a>
+    <a href="{{ url_for('contact') }}" class="btn btn-outline">Get in Touch</a>
+  </div>
+</section>
+
+<section class="highlights">
+  <div class="highlight-card">
+    <p class="highlight-number">9.4</p>
+    <p class="highlight-label">CGPA</p>
+  </div>
+  <div class="highlight-card">
+    <p class="highlight-number">30+</p>
+    <p class="highlight-label">Internship Days Completed</p>
+  </div>
+  <div class="highlight-card">
+    <p class="highlight-number">3</p>
+    <p class="highlight-label">Core Areas: AI · Web · Data</p>
+  </div>
+</section>
+{% endblock %}
