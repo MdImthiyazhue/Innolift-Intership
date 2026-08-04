@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Mohamed Imthiyaz</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Mohamed Imthiyaz</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/projects" class="active">Projects</a>
+      <a href="/contact">Contact</a>
+      <button id="theme-toggle">🌙 Dark Mode</button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>My Projects</h2>
+      <p>
+        A live REST API demo (Day 34): projects are stored in memory on the
+        Express server and managed with <strong>GET</strong>,
+        <strong>POST</strong>, <strong>PUT</strong>, and <strong>DELETE</strong>
+        requests to <code>/api/projects</code>.
+      </p>
+
+      <div id="status-msg"></div>
+
+      <h3 style="margin-top: 20px; color: var(--primary-dark);">Add a New Project</h3>
+      <form id="add-project-form">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" placeholder="Project title" required />
+
+        <label for="description">Description</label>
+        <textarea id="description" name="description" placeholder="Short description" required></textarea>
+
+        <label for="tags">Tags (comma separated)</label>
+        <input type="text" id="tags" name="tags" placeholder="Node.js, Express, REST API" />
+
+        <button class="btn" type="submit">➕ Add Project (POST)</button>
+      </form>
+    </div>
+
+    <div class="card" style="margin-top: 24px;">
+      <h3 style="color: var(--primary-dark); margin-bottom: 12px;">Project List</h3>
+      <div class="projects-grid" id="projects-grid">
+        <p class="skeleton">Loading projects…</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>&copy; 2026 Mohamed Imthiyaz — Built with Node.js &amp; Express</footer>
+  <script src="/js/theme.js"></script>
+  <script src="/js/projects.js"></script>
+</body>
+</html>
