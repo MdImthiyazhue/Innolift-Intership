@@ -1,0 +1,14 @@
+{
+  "name": "day32-portfolio-express",
+  "version": "1.0.0",
+  "description": "Day 32 - Backend Technology 2 - Portfolio website served with a Node.js Express server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Mohamed Imthiyaz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
