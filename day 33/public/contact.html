@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Mohamed Imthiyaz</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Mohamed Imthiyaz</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/projects">Projects</a>
+      <a href="/contact" class="active">Contact</a>
+      <button id="theme-toggle">🌙 Dark Mode</button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>Get In Touch</h2>
+      <p>This form actually submits to the Express backend via POST — try it out!</p>
+
+      <form action="/contact" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Type your message..." required></textarea>
+
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+
+      <ul class="links" style="margin-top: 24px;">
+        <li>🔗 <a href="https://www.linkedin.com/in/mohamed-imthiyas-44i16/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li>💻 <a href="https://github.com/MdImthiyazhue" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>&copy; 2026 Mohamed Imthiyaz — Built with Node.js &amp; Express</footer>
+  <script src="/js/theme.js"></script>
+</body>
+</html>

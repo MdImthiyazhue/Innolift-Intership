@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Mohamed Imthiyaz</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Mohamed Imthiyaz</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/projects" class="active">Projects</a>
+      <a href="/contact">Contact</a>
+      <button id="theme-toggle">🌙 Dark Mode</button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>My Projects</h2>
+      <p>Loaded dynamically from a JSON API route on the Express server (<code>GET /api/projects</code>).</p>
+      <div class="projects-grid" id="projects-grid">
+        <p class="skeleton">Loading projects…</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>&copy; 2026 Mohamed Imthiyaz — Built with Node.js &amp; Express</footer>
+  <script src="/js/theme.js"></script>
+  <script src="/js/projects.js"></script>
+</body>
+</html>

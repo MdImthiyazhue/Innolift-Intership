@@ -1,0 +1,14 @@
+{
+  "name": "day33-portfolio-express",
+  "version": "1.1.0",
+  "description": "Day 33 - Backend Technology 3 - Enhanced portfolio website with more functionality, CSS design, and a finalized backend choice (Node.js/Express)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Mohamed Imthiyaz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
