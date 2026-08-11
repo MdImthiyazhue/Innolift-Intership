@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #f4f6fb;
+  color: #1f2430;
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+.app-header h1 {
+  font-size: 1.6rem;
+  margin-bottom: 4px;
+  color: #4b2e83; /* Innolift purple accent */
+}
+
+.app-header p {
+  color: #5a6072;
+  margin-top: 0;
+}
+
+.status {
+  padding: 16px;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.status.error {
+  color: #b3261e;
+  background: #fdecea;
+}
+
+.table-wrapper {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.student-table thead {
+  background: #4b2e83;
+  color: #fff;
+}
+
+.student-table th,
+.student-table td {
+  text-align: left;
+  padding: 12px 16px;
+}
+
+.student-table tbody tr:nth-child(even) {
+  background: #f8f7fc;
+}
+
+.student-table tbody tr:hover {
+  background: #ece7f7;
+}
+
+/* Responsive: stack table rows into cards on small screens */
+@media (max-width: 640px) {
+  .student-table thead {
+    display: none;
+  }
+
+  .student-table,
+  .student-table tbody,
+  .student-table tr,
+  .student-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .student-table tr {
+    margin-bottom: 12px;
+    border-bottom: 4px solid #f4f6fb;
+  }
+
+  .student-table td {
+    padding: 8px 16px;
+  }
+
+  .student-table td::before {
+    content: attr(data-label) ": ";
+    font-weight: 600;
+    color: #4b2e83;
+  }
+}
