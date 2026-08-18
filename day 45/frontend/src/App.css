@@ -1,0 +1,89 @@
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+  padding: 0 16px;
+}
+
+h1 {
+  color: #6A0DAD;
+  text-align: center;
+}
+
+.student-form {
+  background: #f5f0fa;
+  border: 1px solid #d9c7ef;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.student-form input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.student-form button {
+  background: #6A0DAD;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.student-form button:disabled {
+  background: #b295d1;
+  cursor: not-allowed;
+}
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.student-table th,
+.student-table td {
+  border: 1px solid #ddd;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.student-table th {
+  background: #6A0DAD;
+  color: white;
+}
+
+.error-text {
+  color: #b00020;
+  font-weight: bold;
+}
+
+.success-text {
+  color: #1a7f37;
+  font-weight: bold;
+}
+
+.info-text {
+  color: #555;
+}
+
+.empty-text {
+  color: #777;
+  font-style: italic;
+}
+
+.retry-btn {
+  margin-top: 16px;
+  background: white;
+  color: #6A0DAD;
+  border: 1px solid #6A0DAD;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
