@@ -1,0 +1,5 @@
+$kind: http-request
+name: 09 - Invalid Endpoint (GET /api/student)
+url: "{{baseUrl}}/api/student"
+method: GET
+order: 9000
