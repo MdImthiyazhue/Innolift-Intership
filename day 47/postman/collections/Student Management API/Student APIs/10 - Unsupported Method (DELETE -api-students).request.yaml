@@ -1,0 +1,5 @@
+$kind: http-request
+name: 10 - Unsupported Method (DELETE /api/students)
+url: "{{baseUrl}}/api/students"
+method: DELETE
+order: 10000

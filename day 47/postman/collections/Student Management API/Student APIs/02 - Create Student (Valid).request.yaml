@@ -1,0 +1,15 @@
+$kind: http-request
+name: 02 - Create Student (Valid)
+url: http://127.0.0.1:5000/api/students
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "name": "Test Student",
+      "email": "test@example.com",
+      "course": "Computer Science"
+    }
+order: 2000

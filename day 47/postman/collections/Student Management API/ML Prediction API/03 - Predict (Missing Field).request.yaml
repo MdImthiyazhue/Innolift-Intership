@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{baseUrl}}/api/predict"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "tenure_months": 3,
+      "monthly_charges": 95.0,
+      "total_purchases": 2
+    }
+order: 3000

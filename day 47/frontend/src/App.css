@@ -1,0 +1,338 @@
+.container {
+  max-width: 760px;
+  margin: 40px auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  padding: 0 20px;
+  color: #2d3748;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.app-header h1 {
+  color: #6A0DAD;
+  margin-bottom: 6px;
+  font-size: 2rem;
+}
+
+.app-subtitle {
+  color: #6b7280;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.card-section {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.card-section h2 {
+  color: #6A0DAD;
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.4rem;
+  border-bottom: 2px solid #f3e8ff;
+  padding-bottom: 8px;
+}
+
+.section-description {
+  color: #4b5563;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+/* =========================================================================
+   Student Form & Table Styles
+   ========================================================================= */
+.student-form {
+  background: #f5f0fa;
+  border: 1px solid #d9c7ef;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.student-form h3 {
+  margin-top: 0;
+  color: #581c87;
+  font-size: 1.15rem;
+}
+
+.student-form input {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 0.95rem;
+}
+
+.student-form input:focus {
+  outline: none;
+  border-color: #6A0DAD;
+  box-shadow: 0 0 0 2px rgba(106, 13, 173, 0.15);
+}
+
+.student-form button {
+  background: #6A0DAD;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.student-form button:hover:not(:disabled) {
+  background: #560a8f;
+}
+
+.student-form button:disabled {
+  background: #b295d1;
+  cursor: not-allowed;
+}
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+.student-table th,
+.student-table td {
+  border: 1px solid #e2e8f0;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.student-table th {
+  background: #6A0DAD;
+  color: white;
+  font-weight: 600;
+}
+
+.student-table tr:nth-child(even) {
+  background: #fdfafd;
+}
+
+.retry-btn {
+  margin-top: 16px;
+  background: white;
+  color: #6A0DAD;
+  border: 1px solid #6A0DAD;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.retry-btn:hover {
+  background: #f5f0fa;
+}
+
+/* =========================================================================
+   Prediction UI (Day 47) Styles
+   ========================================================================= */
+.prediction-section {
+  background: #faf7fd;
+  border: 1px solid #e9d5ff;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.form-group input {
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #6A0DAD;
+  box-shadow: 0 0 0 2px rgba(106, 13, 173, 0.15);
+}
+
+.predict-btn {
+  display: block;
+  width: 100%;
+  background: #6A0DAD;
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.predict-btn:hover:not(:disabled) {
+  background: #560a8f;
+}
+
+.predict-btn:disabled {
+  background: #a78bfa;
+  cursor: not-allowed;
+}
+
+.pred-error {
+  margin-top: 12px;
+  padding: 10px;
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+  border-radius: 6px;
+}
+
+/* Prediction Result Card */
+.prediction-result-card {
+  margin-top: 24px;
+  padding: 20px;
+  border-radius: 8px;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.prediction-result-card h3 {
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-size: 1.2rem;
+}
+
+.result-churn {
+  background: #fff1f2;
+  border: 2px solid #fecdd3;
+  color: #881337;
+}
+
+.result-churn h3 {
+  color: #9f1239;
+}
+
+.result-no-churn {
+  background: #f0fdf4;
+  border: 2px solid #bbf7d0;
+  color: #14532d;
+}
+
+.result-no-churn h3 {
+  color: #166534;
+}
+
+.result-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.result-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.05rem;
+}
+
+.result-label {
+  font-weight: 600;
+  min-width: 160px;
+}
+
+.result-value {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.raw-prob {
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: #6b7280;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.badge-churn {
+  background: #e11d48;
+  color: #ffffff;
+}
+
+.badge-no-churn {
+  background: #16a34a;
+  color: #ffffff;
+}
+
+.result-summary {
+  margin: 10px 0 0 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Feedback & State Indicators */
+.error-text {
+  color: #b00020;
+  font-weight: 500;
+  margin: 8px 0;
+}
+
+.success-text {
+  color: #15803d;
+  font-weight: 500;
+  margin: 8px 0;
+}
+
+.info-text {
+  color: #4b5563;
+}
+
+.empty-text {
+  color: #6b7280;
+  font-style: italic;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
